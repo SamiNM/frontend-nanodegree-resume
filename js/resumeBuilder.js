@@ -103,17 +103,17 @@ education.display = function(){
         
     }
     
-    for(var o = 0; o < education.onlineCourses.length; o++ ){
+    for(var course = 0; course < education.onlineCourses.length; course++ ){
         $("#education").append(HTMLschoolStart);
         $(".education-entry:last").append(HTMLonlineClasses);
         
-        var formattedTitle = HTMLonlineTitle.replace("%data%",education.onlineCourses[o].title).replace("#",education.onlineCourses[o].url);
+        var formattedTitle = HTMLonlineTitle.replace("%data%",education.onlineCourses[course].title).replace("#",education.onlineCourses[course].url);
         $(".education-entry:last").append(formattedTitle);
-        var formattedSchool = HTMLonlineSchool.replace("%data%",education.onlineCourses[o].school);
+        var formattedSchool = HTMLonlineSchool.replace("%data%",education.onlineCourses[course].school);
         $(".education-entry:last").append(formattedSchool);
-        var formattedDate = HTMLonlineDates.replace("%data%",education.onlineCourses[o].dates);
+        var formattedDate = HTMLonlineDates.replace("%data%",education.onlineCourses[course].dates);
         $(".education-entry:last").append(formattedDate);
-        var formattedUrl = HTMLonlineURL.replace("%data%",education.onlineCourses[o].url).replace("#",education.onlineCourses[o].url);
+        var formattedUrl = HTMLonlineURL.replace("%data%",education.onlineCourses[course].url).replace("#",education.onlineCourses[course].url);
         $(".education-entry:last").append(formattedUrl);   
     }  
 };
@@ -131,13 +131,13 @@ bio.display = function(){
     
     
     var formattedMobile = HTMLmobile.replace("%data%",bio.contacts.mobile);
-    $("#topContacts").append(formattedMobile);
+    $("#topContacts, #footerContacts").append(formattedMobile);
     var formattedEmaile = HTMLemail.replace("%data%",bio.contacts.email);
-    $("#topContacts").append(formattedEmaile);
+    $("#topContacts, #footerContacts").append(formattedEmaile);
     var formattedGithub = HTMLgithub.replace("%data%",bio.contacts.github);
-    $("#topContacts").append(formattedGithub);
+    $("#topContacts, #footerContacts").append(formattedGithub);
     var formattedLocation = HTMLlocation.replace("%data%",bio.contacts.location);
-    $("#topContacts").append(formattedLocation);
+    $("#topContacts, #footerContacts").append(formattedLocation);
 
     var formattedWelcome = HTMLwelcomeMsg.replace("%data%",bio.welcomeMessage);
     $("#header").append(formattedWelcome);
