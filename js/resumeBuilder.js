@@ -96,7 +96,7 @@ education.display = function(){
          var formattedLocation = HTMLschoolLocation.replace("%data%",education.schools[i].location);
         $(".education-entry:last").append(formattedLocation);
         
-        for(var m = 0; m < education.schools[i].majors.legth; m++ ){
+        for(var m = 0; m < education.schools[i].majors.length; m++ ){
              var formattedMajer = HTMLschoolMajor.replace("%data%",education.schools[i].majors[m]);
             $(".education-entry:last").append(formattedMajer);
         }
