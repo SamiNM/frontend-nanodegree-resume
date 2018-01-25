@@ -1,29 +1,29 @@
 // Object that hold info about my work experience
 var work ={
-    "jobs" :[
+    jobs :[
     {
-        "employer":"Jal",
-        "title":"Help Disk",
-        "location":"KSA", 
-        "dates":"jul 9, 2017 - Future", 
-        "description":"Who is responsible about configuring new devices like new printer, new labtop and desktop and installing software"
+        employer:"Jal",
+        title:"Help Disk",
+        location:"KSA", 
+        dates:"jul 9, 2017 - Future", 
+        description:"Who is responsible about configuring new devices like new printer, new labtop and desktop and installing software"
     }]
 };
 
 
 // Object that hold info about Me
 var bio ={
-    "name":"Sami Almutairi",
-    "role":"Help Disk", 
-    "welcomeMessage":"Hello to my profile", 
-    "biopic":"images/fry.jpg", 
-    "contacts":{
-        "mobile":"0555555555", 
-        "email":"example@gmail.com", 
-        "github":"SamiNM",  
-        "location":"Arass" 
+    name:"Sami Almutairi",
+    role:"Help Disk", 
+    welcomeMessage:"Hello to my profile", 
+    biopic:"images/fry.jpg", 
+    contacts:{
+        mobile:"0555555555", 
+        email:"example@gmail.com", 
+        github:"SamiNM",  
+        location:"Arass" 
     },
-    "skills":[
+    skills:[
         "awesoneness","delivering things","cryogenic sleep","saving the universe"
     ]
 };
@@ -31,57 +31,57 @@ var bio ={
 
 // Object that hold all the projects that i have done
 var projects = {
-    "projects":
+    projects:
     [
         {
-            "title":"Video Sharing Site", 
-            "dates":"May-12-2016",
-            "description":"Final Year Project",
-            "images":["images/197x148.gif"]
+            title:"Video Sharing Site", 
+            dates:"May-12-2016",
+            description:"Final Year Project",
+            images:["images/197x148.gif"]
         },
         {
-            "title":"Simplex Project", 
-            "dates":"2016",
-            "description":"It is a course project to implement Simplex Method programmatically",
-            "images":["images/197x148.gif"]       
+            title:"Simplex Project", 
+            dates:"2016",
+            description:"It is a course project to implement Simplex Method programmatically",
+            images:["images/197x148.gif"]       
         }
     ]
 };
 
 // Object that hold info about my education 
 var education = {
-    "schools" : 
+    schools : 
     [
         {
-            "name":"Qassim University", 
-            "location":"Kingdim of Saudi Arabia", 
-            "degree":"3.42", 
-            "dates":"May-12-2016", 
-            "url":"http://www.qu.edu.sa/",
-            "majors":["Computer Science"] 
+            name:"Qassim University", 
+            location:"Kingdim of Saudi Arabia", 
+            degree:"3.42", 
+            dates:"May-12-2016", 
+            url:"http://www.qu.edu.sa/",
+            majors:["Computer Science"] 
         },
         {
-            "name":"Colchester English Study Centre", 
-            "location":"Colchester, UK", 
-            "degree":"", 
-            "dates":"Jully-5-2011", 
-            "url":"http://www.cesc.co.uk/",
-            "majors":["English Course"] 
+            name:"Colchester English Study Centre", 
+            location:"Colchester, UK", 
+            degree:"", 
+            dates:"Jully-5-2011", 
+            url:"http://www.cesc.co.uk/",
+            majors:["English Course"] 
         }
     ],
-    "onlineCourses":
+    onlineCourses:
     [
         {
-        "title":"Frontend", 
-        "school":"Udacity", 
-        "dates":"FEB-15-2018", 
-        "url":"https://udacity.com/"
+        title:"Frontend", 
+        school:"Udacity", 
+        dates:"FEB-15-2018", 
+        url:"https://udacity.com/"
         }
     ] 
 };
 
 // function to display education info into the webpage
-education.displayEducaton = function(){
+education.display = function(){
     for(var i=0; i < education.schools.length;i++ ){
         $("#education").append(HTMLschoolStart);
         
@@ -118,11 +118,11 @@ education.displayEducaton = function(){
     }  
 };
 
-education.displayEducaton();
+education.display();
 
 
 // To Display bio info
-bio.displayBio = function(){
+bio.display = function(){
     var formattedRole = HTMLheaderRole.replace("%data%",bio.role);
     $("#header").prepend(formattedRole);        
     
@@ -152,11 +152,11 @@ bio.displayBio = function(){
         $("#skills").append(formattedSkills);
     }
 };
-// invoking the displayBio function
-bio.displayBio();
+// invoking the bio display function
+bio.display();
 
 // function to display work info into the browser
-work.displayWork = function(){
+work.display = function(){
     for(var j=0; j < work.jobs.length; j++){
             $("#workExperience").append(HTMLworkStart);
 
@@ -175,10 +175,10 @@ work.displayWork = function(){
     }
 };
 
-work.displayWork();
+work.display();
 
 // using prototype to add function to the project object to display the projects info in the webpages 
-projects.displayProjects = function(){
+projects.display = function(){
     for(var p = 0; p < projects.projects.length; p++)
     {
         $("#projects").append(HTMLprojectStart);
@@ -199,65 +199,9 @@ projects.displayProjects = function(){
         
     }
 };
-projects.displayProjects();
+projects.display();
 
 
 $("#mapDiv").append(googleMap);
 
 
-
- 
-
-//console.log(bio.name);
-//function inName(name) {
-//    name = name.trim.split(" ");
-//    name[0] = name[0].slice(0,1).toUpperCase() + name[0].slice(1).toLowerCase();
-//    name[1] = name[1].toUpperCase();
-//    return name[0] +" "+ name[1];
-//}
-//$("#main").append(internationalizeButton);
-
-
-
-
-
-//var name = "AlbERt EINstEiN";
-//
-//function nameChanger(oldName) {
-//    var finalName = oldName;
-//    // Your code goes here!
-//    finalName = finalName.split(" ");
-//    finalName[0] = finalName[0].slice(0,1).toUpperCase() + finalName[0].slice(1).toLowerCase();
-//    finalName[1] = finalName[1].toUpperCase();
-//    finalName = finalName.join(" ");
-//    // Don't delete this line!
-//    return finalName;
-//}
-//
-//// Did your code work? The line below will tell you!
-//$("#main").append(nameChanger(name));
-
-//var awesomeThoughts = "I am Sami and I am AWESOME";
-//var funThought = awesomeThoughts.replace("AWESOME","FUN");
-//
-//$("#main").append(funThought);
-
-//var formattedName = HTMLheaderName.replace("%data%","Sami Almutairi");
-//var formattedRole = HTMLheaderRole.replace("%data%","Web Developer");
-//
-// $("#header").prepend(formattedName);
-// $("#header").append(formattedRole);
-
-//var newArray = [1,2,3];
-//
-//
-//
-//function incrementLastArrayElement(_array)  {
-//    var ara = [];
-//
-//    _array.push(_array.pop() + 1);
-//    ara = _array.slice(0);
-//    return ara;
-//}
-//
-//$("#main").append("the first array = "+incrementLastArrayElement(newArray));
