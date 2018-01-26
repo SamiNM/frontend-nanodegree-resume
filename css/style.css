@@ -131,7 +131,10 @@ a {
 
 /* TODO: Replace with image later */
 #header {
-  background-color: steelblue;
+    background-image: url(../images/stars.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .flex-box {
@@ -172,6 +175,26 @@ span {
 
 #lets-connect {
   text-align: center;
+}
+
+body {
+    width: 90%;
+    margin-left:  auto;
+    margin-right:  auto;
+    margin-top:  1%;
+    background-image: url(images/lib.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#main {
+    border: 1px solid black;
+    box-shadow: 0 0 10px 10px lightgray;
+}
+
+hr {
+  box-shadow: 0 0 10px 10px lightgrey;
 }
 
 /* Media queries to handle various device widths */
